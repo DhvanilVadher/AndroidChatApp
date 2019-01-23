@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "512043179277",
+    "firebase_url": "https://auth-bab4f.firebaseio.com",
+    "project_id": "auth-bab4f",
+    "storage_bucket": "auth-bab4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512043179277:android:7022eccd28d5ed1a",
+        "android_client_info": {
+          "package_name": "com.example.dhvanil.authi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512043179277-525hh6ajslh10stc3g9ju3230ucb89q2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dhvanil.authi",
+            "certificate_hash": "2698a81cc62359714626ec6b9415beb2791b33bb"
+          }
+        },
+        {
+          "client_id": "512043179277-9m84jqjc3r1oh4vfa4n8rm705maqepde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMLS5k-o9Rwzr0eQPkR9RRBtSfZ6pe6qQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512043179277-9m84jqjc3r1oh4vfa4n8rm705maqepde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
