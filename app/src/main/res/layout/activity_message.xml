@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MessageActivity">
+    tools:context=".MessageActivity"
+    >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -31,11 +32,12 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="10"></android.support.v7.widget.RecyclerView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <EditText
             android:id="@+id/sendMessageText"
             android:layout_width="350sp"
@@ -43,11 +45,14 @@
             android:background="#008cff"
             android:hint="Enter Your Message Here"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold">
+        </EditText>
+
         <Button
+            android:background="@drawable/ic_action_name"
             android:layout_width="wrap_content"
             android:layout_height="50sp"
-            android:onClick="SendMessageToReceiever"/>
+            android:onClick="SendMessageToReceiever" />
+
     </LinearLayout>
 </LinearLayout>

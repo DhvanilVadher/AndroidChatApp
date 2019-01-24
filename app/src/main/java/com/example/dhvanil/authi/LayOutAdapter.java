@@ -51,6 +51,7 @@ public class LayOutAdapter extends RecyclerView.Adapter<LayOutAdapter.ViewHolder
                 Intent intent = new Intent( ctx,MessageActivity.class);
                 intent.putExtra( "ImageUrl",user1.getImageUrl());
                 intent.putExtra( "Name",user1.getname() );
+                intent.putExtra( "id",user1.getId() );
                 ctx.startActivity(intent);
             }
         } );
