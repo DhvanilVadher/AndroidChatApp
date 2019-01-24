@@ -1,37 +1,37 @@
 package com.example.dhvanil.authi;
 
 public class Chat {
-    private String Sender;
-    private String Receiever;
-    private String Message;
+    private String sender;
+    private String receiever;
+    private String message;
 
     public Chat( String sender, String receiever, String message ) {
-        Sender = sender;
-        Receiever = receiever;
-        Message = message;
+        sender = sender;
+        receiever = receiever;
+        message = message;
     }
-
+    public Chat(){}
     public String getSender() {
-        return Sender;
+        return sender;
     }
 
     public void setSender( String sender ) {
-        Sender = sender;
+        this.sender = sender;
     }
 
     public String getReceiever() {
-        return Receiever;
+        return receiever;
     }
 
     public void setReceiever( String receiever ) {
-        Receiever = receiever;
+        this.receiever = receiever;
     }
 
     public String getMessage() {
-        return Message;
+        return message;
     }
 
     public void setMessage( String message ) {
-        Message = message;
+        this.message = message;
     }
 }

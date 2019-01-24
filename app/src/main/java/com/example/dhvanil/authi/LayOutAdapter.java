@@ -34,7 +34,7 @@ public class LayOutAdapter extends RecyclerView.Adapter<LayOutAdapter.ViewHolder
     public void onBindViewHolder( @NonNull ViewHolder holder, int position ) {
         final User user1 = USERS.get(position);
         holder.username.setText( user1.getname());
-        holder.username.setText(user1.getname());
+      //  holder.username.setText(user1.getname());
         if(user1.getImageUrl().equals( "Default" ))
         {
             holder.profilePhoto.setImageResource( R.mipmap.ic_launcher );
