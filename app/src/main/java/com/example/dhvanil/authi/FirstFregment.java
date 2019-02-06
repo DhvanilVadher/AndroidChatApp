@@ -68,7 +68,6 @@ public class FirstFregment extends Fragment {
             }
             @Override
             public void onCancelled( @NonNull DatabaseError databaseError ) {
-
             }
         } );
 
