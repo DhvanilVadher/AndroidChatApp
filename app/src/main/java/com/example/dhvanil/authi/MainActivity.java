@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity{
         Auth.createUserWithEmailAndPassword( Email.getText().toString(),Password.getText().toString() ).addOnSuccessListener( new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess( AuthResult authResult ) {
-                FirebaseUser user = authResult.getUser();
+                final FirebaseUser user = authResult.getUser();
                 final String userId= user.getUid();
                 DatabaseReference reference = mdb.child( "User" ).child( userId );
                 HashMap<String,String> hashMap = new HashMap<>(  );
@@ -66,10 +66,29 @@ public class MainActivity extends AppCompatActivity{
                     public void onSuccess( Void aVoid ) {
                         Intent intent = new Intent( MainActivity.this,ChatActivity.class );
                         intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK );
-                        startActivity(intent);
-                        finish();
-                        Toast.makeText( MainActivity.this,"Hello"+UserName,Toast.LENGTH_SHORT).show();
+                        EmailVerify();
+                        if(user.isEmailVerified()==true) {
+                            startActivity( intent );
+                            finish();
+                            Toast.makeText( MainActivity.this, "Hello" + UserName, Toast.LENGTH_SHORT ).show();
+                        }
                     }
+
+                    private void EmailVerify() {
+                        final FirebaseUser user1 = Auth.getCurrentUser();
+                        user1.sendEmailVerification().addOnSuccessListener( new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess( Void aVoid ) {
+                                Toast.makeText(MainActivity.this,"Verification Email sent to "+ user1.getDisplayName(),Toast.LENGTH_SHORT);
+                            }
+                        } ).addOnFailureListener( new OnFailureListener() {
+                            @Override
+                            public void onFailure( @NonNull Exception e ) {
+                                Toast.makeText(MainActivity.this,"Try Again",Toast.LENGTH_SHORT);
+
+                            }
+                        } );
+                }
                 } ).addOnFailureListener( new OnFailureListener() {
                     @Override
                     public void onFailure( @NonNull Exception e ) {

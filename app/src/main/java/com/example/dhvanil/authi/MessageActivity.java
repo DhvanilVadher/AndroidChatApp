@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -75,7 +74,7 @@ public class MessageActivity extends AppCompatActivity {
         hashMap.put( "sender",sender );
         hashMap.put("message",message);
         hashMap.put( "receiever",receiever );
-        dbr.child( "Chats" ).push().setValue( hashMap );
+        dbr.child( "Chats" ).push().setValue(hashMap);
     }
     private void receieveMessage ( final String sender, final String receiever){
         final ArrayList<ChatClass> myChat= new ArrayList<>();
