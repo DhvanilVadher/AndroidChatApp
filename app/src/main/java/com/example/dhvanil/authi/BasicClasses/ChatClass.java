@@ -1,6 +1,6 @@
-package com.example.dhvanil.authi;
+package com.example.dhvanil.authi.BasicClasses;
 
-import android.support.v4.view.PagerAdapter;
+import com.example.dhvanil.authi.BasicClasses.Chat;
 
 public class ChatClass extends Chat {
     private boolean senderOfNot;

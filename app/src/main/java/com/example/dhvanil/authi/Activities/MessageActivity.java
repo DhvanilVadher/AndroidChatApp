@@ -1,4 +1,4 @@
-package com.example.dhvanil.authi;
+package com.example.dhvanil.authi.Activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,6 +12,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.dhvanil.authi.Adapters.MessageAdapter;
+import com.example.dhvanil.authi.BasicClasses.Chat;
+import com.example.dhvanil.authi.BasicClasses.ChatClass;
+import com.example.dhvanil.authi.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

@@ -1,4 +1,4 @@
-package com.example.dhvanil.authi;
+package com.example.dhvanil.authi.BasicClasses;
 
 public class Chat {
     private String sender;

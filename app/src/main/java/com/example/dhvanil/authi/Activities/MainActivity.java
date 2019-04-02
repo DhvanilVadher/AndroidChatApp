@@ -1,13 +1,14 @@
-package com.example.dhvanil.authi;
-import android.app.ActionBar;
+package com.example.dhvanil.authi.Activities;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.dhvanil.authi.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -37,19 +38,19 @@ public class MainActivity extends AppCompatActivity{
             if(firebaseUser!=null){
                 String a=firebaseUser.getUid();
                 Toast.makeText( MainActivity.this,a,Toast.LENGTH_SHORT ).show();
-                Intent intent = new Intent( MainActivity.this,ChatActivity.class);
+                Intent intent = new Intent( MainActivity.this, ChatActivity.class);
                 startActivity( intent );
                 finish();
             }
         }
 
     public void Login( View view ) {
-        Intent intent = new Intent( MainActivity.this,LoginActivity.class);
+        Intent intent = new Intent( MainActivity.this, LoginActivity.class);
         //intent.putExtra(  );
         startActivity( intent );
     }
     public void submit( View view ) {
-        Auth.createUserWithEmailAndPassword( Email.getText().toString(),Password.getText().toString() ).addOnSuccessListener( new OnSuccessListener<AuthResult>() {
+        Auth.createUserWithEmailAndPassword( Email.getText().toString(),Password.getText().toString()).addOnSuccessListener( new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess( AuthResult authResult ) {
                 final FirebaseUser user = authResult.getUser();
@@ -67,10 +68,14 @@ public class MainActivity extends AppCompatActivity{
                         Intent intent = new Intent( MainActivity.this,ChatActivity.class );
                         intent.addFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK );
                         EmailVerify();
-                        if(user.isEmailVerified()==true) {
+                        if(Auth.getCurrentUser().isEmailVerified()==true) {
                             startActivity( intent );
                             finish();
                             Toast.makeText( MainActivity.this, "Hello" + UserName, Toast.LENGTH_SHORT ).show();
+                        }
+                        else
+                        {
+                            Log.v("Not VArified","not varified");
                         }
                     }
 
@@ -79,12 +84,12 @@ public class MainActivity extends AppCompatActivity{
                         user1.sendEmailVerification().addOnSuccessListener( new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess( Void aVoid ) {
-                                Toast.makeText(MainActivity.this,"Verification Email sent to "+ user1.getDisplayName(),Toast.LENGTH_SHORT);
+                                Toast.makeText(MainActivity.this,"Verification Email sent to "+ user1.getDisplayName(),Toast.LENGTH_SHORT).show();
                             }
                         } ).addOnFailureListener( new OnFailureListener() {
                             @Override
                             public void onFailure( @NonNull Exception e ) {
-                                Toast.makeText(MainActivity.this,"Try Again",Toast.LENGTH_SHORT);
+                                Toast.makeText(MainActivity.this,"Try Again",Toast.LENGTH_SHORT).show();
 
                             }
                         } );
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity{
         } ).addOnFailureListener( new OnFailureListener() {
             @Override
             public void onFailure( @NonNull Exception e ) {
+                Log.v( "why",e.toString() );
                 Toast.makeText( MainActivity.this,"Faild!Something went wrong",Toast.LENGTH_SHORT ).show();
             }
         } );

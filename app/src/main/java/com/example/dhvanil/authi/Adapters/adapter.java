@@ -1,4 +1,4 @@
-package com.example.dhvanil.authi;
+package com.example.dhvanil.authi.Adapters;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

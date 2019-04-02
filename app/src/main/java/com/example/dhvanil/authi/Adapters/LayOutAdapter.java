@@ -1,4 +1,4 @@
-package com.example.dhvanil.authi;
+package com.example.dhvanil.authi.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,12 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
 import com.bumptech.glide.Glide;
+import com.example.dhvanil.authi.BasicClasses.User;
+import com.example.dhvanil.authi.Activities.MessageActivity;
+import com.example.dhvanil.authi.R;
 
 import java.util.List;
 
@@ -27,7 +29,7 @@ public class LayOutAdapter extends RecyclerView.Adapter<LayOutAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder( @NonNull ViewGroup parent, int viewType ) {
-        View v=LayoutInflater.from(ctx).inflate(R.layout.sampleview,parent,false);
+        View v=LayoutInflater.from(ctx).inflate( R.layout.sampleview,parent,false);
         return new LayOutAdapter.ViewHolder(v);
     }
     @Override
@@ -48,7 +50,7 @@ public class LayOutAdapter extends RecyclerView.Adapter<LayOutAdapter.ViewHolder
         holder.itemView.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick( View v ) {
-                Intent intent = new Intent( ctx,MessageActivity.class);
+                Intent intent = new Intent( ctx, MessageActivity.class);
                 intent.putExtra( "ImageUrl",user1.getImageUrl());
                 intent.putExtra( "Name",user1.getname() );
                 intent.putExtra( "id",user1.getId() );
