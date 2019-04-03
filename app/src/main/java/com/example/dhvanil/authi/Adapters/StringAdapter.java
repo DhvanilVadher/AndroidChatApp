@@ -44,6 +44,7 @@ public class StringAdapter extends RecyclerView.Adapter<StringAdapter.ViiewHolde
                 @Override
                 public void onClick( View v ) {
                     Intent intent = new Intent( ctx2,GroupMessageActivity.class);
+                    intent.putExtra("GroupName",GrpChats.get(i));
                     ctx2.startActivity(intent);
                 }
             } );
