@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#469ef790"
+    android:background="#5502EF"
     android:orientation="vertical"
     android:padding="20sp"
     tools:context=".Activities.MainActivity">
-    <TextView
+    TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
@@ -17,17 +17,21 @@
         android:textSize="30sp"/>
     <EditText
         android:id="@+id/email"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
+        android:layout_marginLeft="20sp"
         android:fontFamily="sans-serif"
         android:hint="Enter Email_id"
         android:inputType="textEmailAddress"/>
     <EditText
         android:id="@+id/name"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
+        android:layout_margin="20sp"
         android:fontFamily="sans-serif"
         android:hint="Enter Your name"/>
     <EditText
@@ -46,9 +50,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#33f2df06"
+            android:background="#FF02A0"
             android:onClick="submit"
-            android:text="Submit"
+            android:text="submit"
+            android:textStyle="bold"
+            android:textColor="#fff"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="20sp" />
@@ -62,10 +68,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#33f2df06"
+        android:background="#FF02A0"
         android:fontFamily="sans-serif"
         android:onClick="Login"
-        android:text="Click Here To Login"
+        android:text="login here"
+        android:textColor="#fff"
+        android:textStyle="bold|italic"
+        android:letterSpacing="1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="20sp" /></LinearLayout>
