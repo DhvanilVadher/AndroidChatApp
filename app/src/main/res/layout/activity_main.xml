@@ -4,17 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5502EF"
+    android:background="#5A5267"
     android:orientation="vertical"
     android:padding="20sp"
     tools:context=".Activities.MainActivity">
-    TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|top"
-        android:text="Sign In"
-        android:textColor="#2328d2"
-        android:textSize="30sp"/>
+        android:layout_gravity="center"
+        android:background="@drawable/abcd"/>
+
+    <LinearLayout
+        android:layout_marginTop="100sp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_mail_outline_black_24dp"/>
     <EditText
         android:id="@+id/email"
         android:textColor="#fff"
@@ -23,41 +33,70 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20sp"
         android:fontFamily="sans-serif"
-        android:hint="Enter Email_id"
+        android:hint="Email_Id"
+
         android:inputType="textEmailAddress"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_person_black_24dp"/>
     <EditText
+        android:layout_marginLeft="19sp"
+        android:layout_gravity="right"
         android:id="@+id/name"
         android:textColor="#fff"
         android:textColorHint="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20sp"
         android:fontFamily="sans-serif"
-        android:hint="Enter Your name"/>
+        android:hint="Name"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10sp"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_lock_open_black_24dp"/>
     <EditText
+        android:layout_marginLeft="20sp"
+        android:textColorHint="#fff"
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:hint="Enter Password"
+        android:hint="Password"
         android:inputType="textPassword" />
+    </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FF02A0"
+            android:background="#62E8D7"
             android:onClick="submit"
-            android:text="submit"
-            android:textStyle="bold"
-            android:textColor="#fff"
+            android:text="Register"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="20sp" />
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
     </LinearLayout>
 
 
@@ -68,16 +107,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#FF02A0"
+        android:background="#5B5368"
         android:fontFamily="sans-serif"
         android:onClick="Login"
-        android:text="login here"
+        android:text="Already have account? Login here"
         android:textColor="#fff"
         android:textStyle="bold|italic"
-        android:letterSpacing="1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="20sp" /></LinearLayout>
-
-
 </LinearLayout>
