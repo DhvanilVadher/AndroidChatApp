@@ -33,6 +33,9 @@ public class LoginActivity extends AppCompatActivity {
         Password = findViewById( R.id.password1);
         User = UserName.getText().toString();
         pwd = Password.getText().toString();
+        if(User.equals( null  )|| pwd.equals( null )|| User.equals( "" )|| pwd.equals( "" )){
+            return;
+        }
         auth.signInWithEmailAndPassword( User,pwd ).addOnSuccessListener( new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess( AuthResult authResult ) {

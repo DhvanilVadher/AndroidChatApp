@@ -56,9 +56,11 @@ public class FirstFregment extends Fragment {
                 UserList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     User user = snapshot.getValue( User.class );
-                    Log.v(TAG, "User="+user.getId()+" "+user.getImageUrl()+" "+user.getname());
+                   // Log.v(TAG, "User="+user.getId()+" "+user.getImageUrl()+" "+user.getname());
                     if(!snapshot.getKey().equals( firebaseUser.getUid() ))
-                    {UserList.add(user);}
+                    {
+                        UserList.add(user);
+                    }
                 }
                 adapter = new LayOutAdapter(getContext(),UserList);
                 recyclerView.setAdapter(adapter);

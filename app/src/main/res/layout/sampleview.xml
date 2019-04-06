@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
+    android:background="#5E556B"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,8 +11,16 @@
         android:id="@+id/myImage"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:background="@drawable/images"/>
+        android:background="@drawable/ic_person_black_24dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="100sp">
         <TextView
+            android:textColor="#FFF"
+            android:layout_gravity="center"
+            android:textAlignment="center"
             android:id="@+id/Text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,4 +28,5 @@
             android:text="@string/sample_id"
             android:textSize="25sp"
             android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>

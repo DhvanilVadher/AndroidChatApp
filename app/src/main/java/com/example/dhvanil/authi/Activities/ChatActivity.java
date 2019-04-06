@@ -33,7 +33,7 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_chat );
         Toast.makeText( this,"Yeah",Toast.LENGTH_LONG ).show();
-        imageView= findViewById( R.id.ProfileImage );
+        //imageView= findViewById( R.id.ProfileImage );
         textView = findViewById( R.id.ProfileText );
         tabLayout = findViewById( R.id.tablayout );
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -47,12 +47,7 @@ public class ChatActivity extends AppCompatActivity {
             textView.setText( user.getname() );
         else
             Log.v("2222","2222");
-
-        if(user.getImageUrl().equals( "Default" ))
-            imageView.setImageResource( R.mipmap.ic_launcher );
-        else
-            Glide.with(ChatActivity.this).load(user.getImageUrl()).into(imageView);
-    }
+         }
 
     @Override
     public void onCancelled( @NonNull DatabaseError databaseError ) {

@@ -15,9 +15,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_margin="5sp"
+            android:textStyle="bold|italic"
             android:fontFamily="sans-serif"
             android:text="Hi Everyone How Are you"
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="#fff"
             android:textSize="20sp"
             />
     </LinearLayout>

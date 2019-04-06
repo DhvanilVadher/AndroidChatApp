@@ -4,41 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#469ef790"
+    android:background="#554C61"
     android:orientation="vertical"
     android:padding="20sp"
     tools:context=".Activities.MainActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|top"
-        android:text="LogIn Here"
-        android:textColor="#2328d2"
-        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_marginTop="200sp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_mail_outline_black_24dp"/>
     <EditText
+        android:textColor="#FFF"
+        android:textColorHint="#FFFFFF"
         android:id="@+id/email1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
         android:fontFamily="sans-serif"
         android:hint="Enter Email_id"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_lock_open_black_24dp"/>
     <EditText
         android:id="@+id/password1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
+        android:textColorHint="#FFF"
+        android:textColor="#FFF"
         android:hint="Enter Password"
         android:inputType="textPassword" />
-
+    </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="30sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:textColorHint="#FFF"
+            android:textColor="#FFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#33f2df06"
+            android:background="#4BE0CE"
             android:onClick="submit1"
             android:text="Login"
             android:textAlignment="center"

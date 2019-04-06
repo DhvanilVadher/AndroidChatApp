@@ -39,14 +39,9 @@ public class LayOutAdapter extends RecyclerView.Adapter<LayOutAdapter.ViewHolder
       //  holder.username.setText(user1.getname());
         if(user1.getImageUrl().equals( "Default" ))
         {
-            holder.profilePhoto.setImageResource( R.mipmap.ic_launcher );
+            holder.profilePhoto.setImageResource( R.drawable.ic_person_black_24dp );
         }
-        else
-        {
-            Glide.with( ctx ).load( user1.getImageUrl() ).into( holder.profilePhoto );
-        }
-
-        holder.profilePhoto.setImageResource( R.mipmap.ic_launcher );
+        holder.profilePhoto.setImageResource( R.drawable.ic_person_black_24dp );
         holder.itemView.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick( View v ) {

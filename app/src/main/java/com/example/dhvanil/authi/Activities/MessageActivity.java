@@ -64,6 +64,12 @@ public class MessageActivity extends AppCompatActivity {
     public void SendMessageToReceiever( View view ) {
         String sender,receiever,message;
         message= sendMessage.getText().toString();
+        if(message.equals(null) || message.equals("")){
+            return;
+        }
+        else if(sendMessage.getText().toString().equals( null ) || sendMessage.getText().toString().equals( "" )){
+            return;
+        }
         FirebaseUser firebaseUser;
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         sender =firebaseUser.getUid();

@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity{
         startActivity( intent );
     }
     public void submit( View view ) {
+        if(Email.getText().toString().equals("") || Password.getText().toString().equals( "" ) || UserName.getText().toString().equals( "" ) || Email.getText().toString().equals(null) || Password.getText().toString().equals( null ) || UserName.getText().toString().equals( null )){
+            return;
+        }
         Auth.createUserWithEmailAndPassword( Email.getText().toString(),Password.getText().toString()).addOnSuccessListener( new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess( AuthResult authResult ) {
